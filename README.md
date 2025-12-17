@@ -2,6 +2,14 @@
 
 **Enhances the SEO capabilities of the MarketPRO module in Cotonti by adding meta tags, Open Graph, Twitter Cards, JSON-LD Schema.org structured data, keyword extraction, reading time estimation, and related products functionality.**
 
+[![Version](https://img.shields.io/badge/version-2.1.1-green.svg)](https://github.com/webitproff/seomarketpro-cotonti/releases)
+[![Require Market PRO module](https://img.shields.io/badge/MarketPRO-v.5-salmon.svg)](https://github.com/webitproff/marketpro-cotonti)
+[![Cotonti Compatibility](https://img.shields.io/badge/Cotonti_Siena-0.9.26-yellow.svg)](https://github.com/Cotonti/Cotonti)
+[![PHP](https://img.shields.io/badge/PHP-8.4-purple.svg)](https://www.php.net/releases/8_4_0.php)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-blue.svg)](https://www.mysql.com/)
+[![Bootstrap v5.3.8](https://img.shields.io/badge/Bootstrap-v5.3.8-blueviolet.svg)](https://getbootstrap.com/)
+[![License](https://img.shields.io/badge/license-BSD-blue.svg)](https://github.com/webitproff/seomarketpro-cotonti/blob/main/LICENSE)
+
 ![SeoMarketPro for Cotonti](https://github.com/user-attachments/assets/e1a6dbcf-216d-41d3-ae2e-25c492c25223)
 
 Seo Market Pro is a plugin for Cotonti CMF that improves search engine optimization for product pages in the MarketPRO module (version 5+).  

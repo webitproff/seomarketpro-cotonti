@@ -20,10 +20,10 @@ $L['cfg_seomarketpro_currency'] = 'Currency in markup';
 $L['cfg_seomarketpro_currency_hint'] = 'only three-letter ISO 4217 codes in uppercase are allowed. used only for display in JSON-LD markup';
 
 $L['cfg_nonlogo'] = 'Default logo path';
-$L['cfg_nonlogo_hint'] = 'plugins/seomarketpro/logo.webp (no domain)';
+$L['cfg_nonlogo_hint'] = 'plugins/seomarketpro/img/logo.webp (no domain)';
 
 $L['cfg_nonimage'] = 'Default image path';
-$L['cfg_nonimage_hint'] = 'plugins/seomarketpro/image.webp (no domain)';
+$L['cfg_nonimage_hint'] = 'plugins/seomarketpro/img/image.webp (no domain)';
 
 $L['cfg_maxrelated'] = 'Maximum related items per page';
 $L['cfg_maxrelated_hint'] = 'other products from the same category will be shown on the product page';
@@ -45,5 +45,6 @@ $L['seomarketpro_unknown_author'] = 'Unknown seller';
  * Stop words for keyword extraction (English)
  */
 $L['seomarketpro_stop_words'] = 'a,about,above,after,again,against,all,am,an,and,any,are,as,at,be,because,been,before,being,below,between,both,but,by,could,did,do,does,doing,down,during,each,few,for,from,further,had,has,have,having,he,her,here,hers,herself,him,himself,his,how,i,if,in,into,is,it,its,itself,just,me,more,most,my,myself,no,nor,not,now,of,off,on,once,only,or,other,our,ours,ourselves,out,over,own,same,she,should,so,some,such,than,that,the,their,theirs,them,themselves,then,there,these,they,this,those,through,to,too,under,until,up,very,was,we,were,what,when,where,which,while,who,whom,why,with,you,your,yours,yourself,yourselves';
+
 
 

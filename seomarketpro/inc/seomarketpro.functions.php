@@ -7,7 +7,7 @@
  * Date: Dec 18th, 2025
  * @package SeoMarketPro
  * @version 2.1.2
- * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.ccom/users/webitproff
+ * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.com/users/webitproff
  * @license BSD
  */
 
@@ -224,3 +224,4 @@ function get_seomarketpro_main_first_image(int $page_id): string
     // Если изображение не найдено ни в xxxxx_link_main_image, ни в модуле файлов, ни в attacher, возвращаем заглушку
     return $default_image;
 }
+

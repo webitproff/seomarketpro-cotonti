@@ -6,7 +6,7 @@
  * Date: Dec 18th, 2025
  * @package SeoMarketPro
  * @version 2.1.2
- * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.ccom/users/webitproff
+ * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.com/users/webitproff
  * @license BSD
  */
 
@@ -45,4 +45,5 @@ $L['seomarketpro_unknown_author'] = 'Unknown seller';
  * Stop words for keyword extraction (English)
  */
 $L['seomarketpro_stop_words'] = 'a,about,above,after,again,against,all,am,an,and,any,are,as,at,be,because,been,before,being,below,between,both,but,by,could,did,do,does,doing,down,during,each,few,for,from,further,had,has,have,having,he,her,here,hers,herself,him,himself,his,how,i,if,in,into,is,it,its,itself,just,me,more,most,my,myself,no,nor,not,now,of,off,on,once,only,or,other,our,ours,ourselves,out,over,own,same,she,should,so,some,such,than,that,the,their,theirs,them,themselves,then,there,these,they,this,those,through,to,too,under,until,up,very,was,we,were,what,when,where,which,while,who,whom,why,with,you,your,yours,yourself,yourselves';
+
 

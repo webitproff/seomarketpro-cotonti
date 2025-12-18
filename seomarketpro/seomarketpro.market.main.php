@@ -10,8 +10,9 @@ Hooks=market.main
  * Purpose: Обработка страницы перед рендерингом для добавления мета-тегов Open Graph, Twitter Card и Schema.org.
  * Notes: Requires the Market PRO v.5+ by webitproff.
  * Filename: seomarketpro.market.main.php
+ * Date: Dec 18th, 2025
  * @package SeoMarketPro
- * @version 2.1.1
+ * @version 2.1.2
  * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.ccom/users/webitproff
  * @license BSD
  */
@@ -52,30 +53,48 @@ if (isset($item) && is_array($item)) {
     $page_image = get_seomarketpro_main_first_image($item['fieldmrkt_id'] ?? 0);
     $page_locale = Cot::$usr['lang'] ?? Cot::$cfg['defaultlang'];
 
-    $owner_id = (int)($item['fieldmrkt_ownerid'] ?? 0);
-    if ($owner_id > 0) {
-        $author_data = $db->query(
-            "SELECT user_firstname, user_lastname, user_name FROM $db_users WHERE user_id = ?",
-            [$owner_id]
-        )->fetch(PDO::FETCH_ASSOC);
-        if ($author_data) {
-            if (!empty($author_data['user_firstname']) && !empty($author_data['user_lastname'])) {
-                $page_author_name = htmlspecialchars(
-                    $author_data['user_firstname'] . ' ' . $author_data['user_lastname'],
-                    ENT_QUOTES,
-                    'UTF-8'
-                );
-            } elseif (!empty($author_data['user_name'])) {
-                $page_author_name = htmlspecialchars($author_data['user_name'], ENT_QUOTES, 'UTF-8');
-            } else {
-                $page_author_name = Cot::$L['seomarketpro_unknown_author'];
-            }
-        } else {
-            $page_author_name = Cot::$L['seomarketpro_unknown_author'];
-        }
-    } else {
-        $page_author_name = Cot::$L['seomarketpro_unknown_author'];
-    }
+	$owner_id = (int)($item['fieldmrkt_ownerid'] ?? 0);
+
+	if ($owner_id > 0) {
+		// Берём только гарантированно существующие поля
+		$author_data = $db->query(
+			"SELECT * FROM $db_users WHERE user_id = ?",
+			[$owner_id]
+		)->fetch(PDO::FETCH_ASSOC);
+
+		if ($author_data) {
+
+			// Приоритет: firstname + lastname (если существуют в схеме)
+			if (
+				isset($author_data['user_firstname'], $author_data['user_lastname']) &&
+				!empty($author_data['user_firstname']) &&
+				!empty($author_data['user_lastname'])
+			) {
+				$page_author_name = htmlspecialchars(
+					$author_data['user_firstname'] . ' ' . $author_data['user_lastname'],
+					ENT_QUOTES,
+					'UTF-8'
+				);
+
+			// Фолбэк: user_name (гарантированно есть)
+			} elseif (!empty($author_data['user_name'])) {
+				$page_author_name = htmlspecialchars(
+					$author_data['user_name'],
+					ENT_QUOTES,
+					'UTF-8'
+				);
+
+			} else {
+				$page_author_name = Cot::$L['seomarketpro_unknown_author'];
+			}
+
+		} else {
+			$page_author_name = Cot::$L['seomarketpro_unknown_author'];
+		}
+
+	} else {
+		$page_author_name = Cot::$L['seomarketpro_unknown_author'];
+	}
 
     $page_title = !empty($item['fieldmrkt_metatitle'])
         ? $item['fieldmrkt_metatitle']

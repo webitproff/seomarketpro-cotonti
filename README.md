@@ -18,8 +18,10 @@ It helps products appear better in search engines like Google or Yandex.
 With this plugin and MarketPRO v.5+, your products have a better chance of appearing in search results and ranking higher because the necessary meta tags and structured data are added.
 
 ### Requirements and Compatibility
+- **[Market PRO v.5+ by webitproff](https://github.com/webitproff/marketpro-cotonti)**
+- **[Cotonti_Siena CMF v.0.9.26+](https://github.com/Cotonti/Cotonti)**
 - Runs on PHP 8.4+ and MySQL 8.0+/8.4  
-- Compatible with image extensions (files module or attacher plugin) and reviews (marketproreviews)  
+- Compatible with image extensions (**[files module](https://github.com/Alex300/files)** or **[attacher plugin](https://github.com/webitproff/cot-Attacher-Roffun)**) and reviews (marketproreviews)  
 - Settings allow specifying a logo, image placeholder, maximum number of related products, and currency (e.g., USD, EUR, BTC)
 
 ### What Does the Seo Market Pro Plugin Do?

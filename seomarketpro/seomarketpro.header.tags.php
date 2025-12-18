@@ -12,7 +12,7 @@ Hooks=header.tags
  * Filename: seomarketpro.header.tags.php
  * @package SeoMarketPro
  * @version 2.1.1
- * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.ccom/users/webitproff
+ * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.com/users/webitproff
  * @license BSD
  */
 
@@ -67,3 +67,4 @@ if ($env['location'] === 'market' && ($m ?? 'main') === 'main') {
         'HEADER_META_KEYWORDS' => $safe_keywords
     ]);
 }
+

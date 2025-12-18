@@ -8,7 +8,7 @@ Description=SEO enhancements for the MarketPRO module
 Version=2.1.2
 Date=Dec 18th, 2025
 Author=webitproff
-Copyright=Copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.ccom/users/webitproff
+Copyright=Copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.com/users/webitproff
 Notes=Requires the Market PRO v.5+ by webitproff. PHP 8.4+, MySQL 8.0+, Cotonti Siena v.0.9.26+.
 Auth_guests=R
 Lock_guests=12345A
@@ -32,7 +32,7 @@ seomarketpro_currency=06:select:USD,EUR,RUB,UAH,USDT,BTC:USD:допускают�
  * Filename: seomarketpro.setup.php
  * @package SeoMarketPro
  * @version 2.1.2
- * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.ccom/users/webitproff
+ * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.com/users/webitproff
  * @license BSD
  */
 

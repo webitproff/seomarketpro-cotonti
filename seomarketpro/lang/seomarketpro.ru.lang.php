@@ -3,10 +3,10 @@
  * Russian Language File for SeoMarketPro plugin for CMF Cotonti Siena v.0.9.26, PHP v.8.4+, MySQL v.8.0
  * Filename: seomarketpro.ru.lang.php
  * Purpose: Russian localization. Defines strings.
- * Date: 17 Dec 2025
+ * Date: Dec 18th, 2025
  * @package SeoMarketPro
- * @version 2.1.1
- * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.ccom/users/webitproff
+ * @version 2.1.2
+ * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.com/users/webitproff
  * @license BSD
  */
 
@@ -22,10 +22,10 @@ $L['cfg_seomarketpro_currency'] = 'Валюта в разметке';
 $L['cfg_seomarketpro_currency_hint'] = 'допускаются только трёхбуквенные коды ISO 4217 в верхнем регистре. используется только для показа в разметке JSON-LD';
 
 $L['cfg_nonlogo'] = 'Default Logo path';
-$L['cfg_nonlogo_hint'] = 'plugins/seomarketpro/logo.webp (no domain)';
+$L['cfg_nonlogo_hint'] = 'plugins/seomarketpro/img/logo.webp (no domain)';
 
 $L['cfg_nonimage'] = 'Default image path';
-$L['cfg_nonimage_hint'] = 'plugins/seomarketpro/image.webp (no domain)';
+$L['cfg_nonimage_hint'] = 'plugins/seomarketpro/img/image.webp (no domain)';
 
 $L['cfg_maxrelated'] = 'Maximum related posts per page';
 $L['cfg_maxrelated_hint'] = 'в карточке товара будут показаны другие товары из этой категории';
@@ -36,7 +36,7 @@ $L['cfg_maxrelated_hint'] = 'в карточке товара будут пок�
  */
 $L['info_name'] = 'Seo Market Pro';
 $L['info_desc'] = 'Форсируем SEO-возможности модуля Market PRO в Cotonti, добавляем мета-теги, Open Graph, Twitter Card, структурированные данные JSON-LD Schema.org, извлечение ключевых слов, оценку времени чтения и функционал связанных товаров.';
-$L['info_notes'] = 'Требуется: модуль <code>Market PRO v.5+ by webitproff</code>, PHP 8.4+, MySQL 8.0+, Cotonti Siena v.0.9.26 +';
+$L['info_notes'] = 'Требуется: модуль <a href="https://github.com/webitproff/marketpro-cotonti" target="_blank">Market PRO v.5+ by webitproff</a>, PHP 8.4+, MySQL 8.0+, Cotonti Siena v.0.9.26 +';
 
 
 $L['seomarketpro_related'] = 'Связанные и похожие товары';

@@ -4,8 +4,9 @@
  * Purpose: plugin functions
  * Notes: Requires the Market PRO v.5+ by webitproff.
  * Filename: seomarketpro.functions.php
+ * Date: Dec 18th, 2025
  * @package SeoMarketPro
- * @version 2.1.1
+ * @version 2.1.2
  * @copyright (c) webitproff 2025 https://github.com/webitproff or https://abuyfile.ccom/users/webitproff
  * @license BSD
  */
@@ -142,10 +143,24 @@ function get_seomarketpro_main_first_image(int $page_id): string
     }
 
     // Определяем заглушку по умолчанию: используем конфигурацию или резервный путь
-    $default_image = !empty($cfg['plugin']['seomarketpro']['nonimage'])
-        ? $cfg['mainurl'] . $cfg['plugin']['seomarketpro']['nonimage']
-        : $cfg['mainurl'] . '/images/default-placeholder.jpg';
-
+	$default_image = !empty($cfg['plugin']['seomarketpro']['nonimage'])
+		? rtrim($cfg['mainurl'], '/') . '/' . ltrim($cfg['plugin']['seomarketpro']['nonimage'], '/')
+		: rtrim($cfg['mainurl'], '/') . '/images/default-placeholder.jpg';
+/* 
+	Цель каждого шага:
+	rtrim($cfg['mainurl'], '/') – удаляет лишний слеш с конца URL сайта, чтобы не получилось https://marketpro.cot.loc//.
+	'/' – добавляет один слеш между основным URL и путём к файлу.
+	ltrim($cfg['plugin']['seomarketpro']['nonimage'], '/') – убирает слеш в начале пути к картинке, чтобы не получилось //plugins/....
+	То есть эта конструкция гарантирует, что в итоге получится ровно один слеш между доменом и путём к файлу, независимо от того, есть ли слеши в конфиге.
+	Пример:
+	$cfg['mainurl'] = 'https://marketpro.cot.loc/'
+	$cfg['plugin']['seomarketpro']['nonimage'] = '/plugins/seomarketpro/img/default.webp'
+	Результат:
+	https://marketpro.cot.loc/plugins/seomarketpro/img/default.webp
+	Без rtrim и ltrim могло бы получиться:
+	https://marketpro.cot.loc//plugins/seomarketpro/img/default.webp
+	Так что эта «куча слешей» на самом деле защищает от двойных или пропущенных слешей.
+ */
     // Локальный кэш для данных страницы
     static $page_cache = [];
     if (isset($page_cache[$page_id])) {
